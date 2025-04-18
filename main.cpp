@@ -82,14 +82,7 @@ static SOCDBind binds[] =
 	SOCDBind({ KEY_W, KEY_S }),
 
 	SOCDBind({ KEY_LEFT, KEY_RIGHT }),
-	SOCDBind({ KEY_UP, KEY_DOWN }),
-
-	//Vim style
-	SOCDBind({ KEY_H, KEY_L }),
-	SOCDBind({ KEY_J, KEY_K }),
-	
-	//Binding of isaac
-	SOCDBind({ KEY_NUMERIC_4, KEY_NUMERIC_5, KEY_NUMERIC_6, KEY_NUMERIC_8 }),
+	SOCDBind({ KEY_UP, KEY_DOWN })
 };
 
 int main(int numArgs, const char** ppChArgs)
