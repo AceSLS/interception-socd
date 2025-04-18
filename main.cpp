@@ -43,7 +43,9 @@ public:
 		}
 		else if (!down && idx != keysPrio.end())
 		{
-			keysPrio.erase(idx);
+			//keysPrio.erase(idx) deletes the wrong object
+			//TODO: Investigate for performance reasons
+			keysPrio.erase(std::remove_if(keysPrio.begin(), keysPrio.end(), [key](uint16_t k) { return k == key; }));
 		}
 	}
 
