@@ -3,9 +3,14 @@ CPPFLAGS := -O3 -march=native -flto=full
 
 INSTALLDIR := /opt/interception
 
-interception-socd:
+build:
 	$(CXX) $(CPPFLAGS) main.cpp -o interception-socd
 
-install: interception-socd
+clean:
+	rm -v interception-socd
+
+install: build
 	sudo mkdir -p "$(INSTALLDIR)"
 	sudo cp -v interception-socd "$(INSTALLDIR)"
+
+.PHONY: build clean
